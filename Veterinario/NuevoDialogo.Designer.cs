@@ -31,7 +31,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
-            this.tbID = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.tbEspecie = new System.Windows.Forms.TextBox();
@@ -42,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbFecha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.cbPropietario = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -68,13 +68,6 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(100, 20);
             this.tbNombre.TabIndex = 2;
-            // 
-            // tbID
-            // 
-            this.tbID.Location = new System.Drawing.Point(95, 150);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(100, 20);
-            this.tbID.TabIndex = 3;
             // 
             // btnCancelar
             // 
@@ -160,11 +153,20 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Fecha de nac.: ";
             // 
+            // cbPropietario
+            // 
+            this.cbPropietario.FormattingEnabled = true;
+            this.cbPropietario.Location = new System.Drawing.Point(95, 150);
+            this.cbPropietario.Name = "cbPropietario";
+            this.cbPropietario.Size = new System.Drawing.Size(121, 21);
+            this.cbPropietario.TabIndex = 14;
+            // 
             // NuevoDialogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(239, 234);
+            this.Controls.Add(this.cbPropietario);
             this.Controls.Add(this.tbFecha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbChip);
@@ -175,7 +177,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.tbID);
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblNombre);
@@ -191,7 +192,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox tbNombre;
-        private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox tbEspecie;
@@ -202,5 +202,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbFecha;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbPropietario;
     }
 }

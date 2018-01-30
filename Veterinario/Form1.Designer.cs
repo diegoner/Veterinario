@@ -61,7 +61,7 @@
             // 
             // btnLog
             // 
-            this.btnLog.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLog.BackColor = System.Drawing.Color.White;
             this.btnLog.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLog.ForeColor = System.Drawing.Color.DarkGray;
             this.btnLog.Location = new System.Drawing.Point(202, 293);
