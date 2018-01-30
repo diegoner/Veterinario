@@ -86,6 +86,7 @@
             // 
             // derecha
             // 
+            this.derecha.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.derecha.Location = new System.Drawing.Point(389, 323);
             this.derecha.Name = "derecha";
             this.derecha.Size = new System.Drawing.Size(90, 40);
@@ -95,6 +96,7 @@
             // 
             // izquierda
             // 
+            this.izquierda.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.izquierda.Location = new System.Drawing.Point(389, 395);
             this.izquierda.Name = "izquierda";
             this.izquierda.Size = new System.Drawing.Size(90, 40);
