@@ -41,5 +41,25 @@ namespace Veterinario
         {
             this.Dispose();
         }
+
+        private void btnCancelar_MouseHover(object sender, EventArgs e)
+        {
+            btnCancelar.BackColor = Color.DarkGray;
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCancelar.BackColor = Color.Gray;
+        }
+
+        private void btnGuardar_MouseHover(object sender, EventArgs e)
+        {
+            btnGuardar.BackColor = Color.DarkGray;
+        }
+
+        private void btnGuardar_MouseLeave(object sender, EventArgs e)
+        {
+            btnGuardar.BackColor = Color.Gray;
+        }
     }
 }

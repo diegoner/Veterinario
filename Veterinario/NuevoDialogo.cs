@@ -48,24 +48,52 @@ namespace Veterinario
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            conexion.Open();
-            comando = new MySqlCommand("INSERT INTO mascotas (chip, nombre, especie, raza, fecha_nac, id_propietario) VALUES (" + tbChip.Text + ", '" + tbNombre.Text + "', '" + tbEspecie.Text + "', '" + tbRaza.Text + "', " + tbFecha.Text + ", '" + cbPropietario.Text + "')", conexion);
-            comando.ExecuteReader();
-            conexion.Close();
-            conexion.Open();
-            comando = new MySqlCommand("SELECT num_mascotas FROM clientes WHERE DNI = " + Int32.Parse(cbPropietario.Text), conexion);
-            resultado = comando.ExecuteReader();
-            if (resultado.Read()) { numMascotas = resultado.GetInt32(0) + 1; }
-            conexion.Close();
-            conexion.Open();
-            comando = new MySqlCommand("UPDATE clientes SET num_mascotas=" + numMascotas + " WHERE id_cliente = " + cbPropietario.Text , conexion);
-            conexion.Close();
-            this.Dispose();
+            if (!(tbChip.Text.Equals("")|| tbNombre.Text.Equals("") || tbFecha.Text.Equals("") || tbRaza.Text.Equals("") || tbEspecie.Text.Equals("") || cbPropietario.Text.Equals("") )) {
+                conexion.Open();
+                comando = new MySqlCommand("INSERT INTO mascotas (chip, nombre, especie, raza, fecha_nac, id_propietario) VALUES (" + tbChip.Text + ", '" + tbNombre.Text + "', '" + tbEspecie.Text + "', '" + tbRaza.Text + "', " + tbFecha.Text + ", '" + cbPropietario.Text + "')", conexion);
+                comando.ExecuteReader();
+                conexion.Close();
+                conexion.Open();
+                comando = new MySqlCommand("SELECT num_mascotas FROM clientes WHERE DNI = '" + cbPropietario.Text + "'", conexion);
+                resultado = comando.ExecuteReader();
+                if (resultado.Read()) { numMascotas = resultado.GetInt32(0) + 1; }
+                Console.WriteLine(numMascotas);
+                conexion.Close();
+                conexion.Open();
+                comando = new MySqlCommand("UPDATE clientes SET num_mascotas=" + numMascotas + " WHERE dni = '" + cbPropietario.Text + "'", conexion);
+                comando.ExecuteReader();
+                conexion.Close();
+                this.Dispose();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnCancelar_MouseHover(object sender, EventArgs e)
+        {
+            //btnCancelar.Size = new Size(153, 53);
+            btnCancelar.BackColor = Color.DarkGray;
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+            //btnCancelar.Size = new Size(150, 50);
+            btnCancelar.BackColor = Color.Gray;
+        }
+
+        private void btnGuardar_MouseHover(object sender, EventArgs e)
+        {
+            //btnGuardar.Size = new Size(153, 53);
+            btnGuardar.BackColor = Color.DarkGray;
+        }
+
+        private void btnGuardar_MouseLeave(object sender, EventArgs e)
+        {
+            //btnGuardar.Size = new Size(150, 50);
+            btnGuardar.BackColor = Color.Gray;
         }
     }
 }

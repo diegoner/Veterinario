@@ -33,24 +33,7 @@ namespace Veterinario
 
         private void btnLog_Click(object sender, EventArgs e)
         {
-            conexion.Open();
-            comando = new MySqlCommand("SELECT * FROM usuarios", conexion);
-            resultado = comando.ExecuteReader();
-            while (resultado.Read())
-            {
-                if (tbUser.Text == Convert.ToString(resultado[1]) && tbPass.Text == Convert.ToString(resultado[2]))
-                {
-
-                    nuevaVentana.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    lblError.Visible = true;
-                    tbPass.Text = "";
-                }
-            }
-            conexion.Close();
+            
         }
 
         private void tbPass_KeyPress(object sender, KeyPressEventArgs e)
@@ -78,12 +61,36 @@ namespace Veterinario
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLog_Click_1(object sender, EventArgs e)
         {
-            //Width = 600;
-            //button2.Visible = true;
-            //button1.Visible = true;
+            conexion.Open();
+            comando = new MySqlCommand("SELECT * FROM usuarios", conexion);
+            resultado = comando.ExecuteReader();
+            while (resultado.Read())
+            {
+                if (tbUser.Text == Convert.ToString(resultado[1]) && tbPass.Text == Convert.ToString(resultado[2]))
+                {
 
+                    nuevaVentana.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    lblError.Visible = true;
+                    tbPass.Text = "";
+                }
+            }
+            conexion.Close();
+        }
+
+        private void btnLog_MouseHover(object sender, EventArgs e)
+        {
+            btnLog.BackColor = Color.DarkGray;
+        }
+
+        private void btnLog_MouseLeave(object sender, EventArgs e)
+        {
+            btnLog.BackColor = Color.Gray;
         }
     }
 }

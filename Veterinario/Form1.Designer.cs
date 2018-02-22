@@ -33,18 +33,19 @@
             this.tbPass = new System.Windows.Forms.TextBox();
             this.btnLog = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
-            this.derecha = new System.Windows.Forms.Button();
-            this.izquierda = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblPass = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tbUser
             // 
-            this.tbUser.Location = new System.Drawing.Point(265, 149);
+            this.tbUser.Location = new System.Drawing.Point(253, 204);
             this.tbUser.Margin = new System.Windows.Forms.Padding(4);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(132, 26);
@@ -52,25 +53,29 @@
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(265, 207);
+            this.tbPass.Location = new System.Drawing.Point(250, 300);
             this.tbPass.Margin = new System.Windows.Forms.Padding(4);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(132, 26);
             this.tbPass.TabIndex = 3;
+            this.tbPass.UseSystemPasswordChar = true;
             this.tbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPass_KeyPress);
             // 
             // btnLog
             // 
-            this.btnLog.BackColor = System.Drawing.Color.White;
+            this.btnLog.BackColor = System.Drawing.Color.Gray;
             this.btnLog.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLog.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnLog.Location = new System.Drawing.Point(202, 293);
+            this.btnLog.ForeColor = System.Drawing.Color.White;
+            this.btnLog.Location = new System.Drawing.Point(129, 376);
             this.btnLog.Margin = new System.Windows.Forms.Padding(4);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(113, 44);
             this.btnLog.TabIndex = 4;
             this.btnLog.Text = "ENTRAR";
             this.btnLog.UseVisualStyleBackColor = false;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click_1);
+            this.btnLog.MouseLeave += new System.EventHandler(this.btnLog_MouseLeave);
+            this.btnLog.MouseHover += new System.EventHandler(this.btnLog_MouseHover);
             // 
             // lblError
             // 
@@ -84,70 +89,42 @@
             this.lblError.TabIndex = 5;
             this.lblError.Visible = false;
             // 
-            // derecha
+            // pictureBox6
             // 
-            this.derecha.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.derecha.Location = new System.Drawing.Point(389, 323);
-            this.derecha.Name = "derecha";
-            this.derecha.Size = new System.Drawing.Size(90, 40);
-            this.derecha.TabIndex = 6;
-            this.derecha.Text = ">>>>";
-            this.derecha.UseVisualStyleBackColor = true;
+            this.pictureBox6.Image = global::Veterinario.Properties.Resources.pass2;
+            this.pictureBox6.Location = new System.Drawing.Point(50, 289);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(162, 53);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
             // 
-            // izquierda
+            // pictureBox4
             // 
-            this.izquierda.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.izquierda.Location = new System.Drawing.Point(389, 395);
-            this.izquierda.Name = "izquierda";
-            this.izquierda.Size = new System.Drawing.Size(90, 40);
-            this.izquierda.TabIndex = 7;
-            this.izquierda.Text = "<<<<";
-            this.izquierda.UseVisualStyleBackColor = true;
+            this.pictureBox4.Image = global::Veterinario.Properties.Resources.user;
+            this.pictureBox4.Location = new System.Drawing.Point(50, 188);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(162, 60);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
             // 
-            // lblTitle
+            // pictureBox3
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.SystemColors.Control;
-            this.lblTitle.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblTitle.Location = new System.Drawing.Point(54, 50);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(294, 51);
-            this.lblTitle.TabIndex = 9;
-            this.lblTitle.Text = "VETERINARIO";
-            // 
-            // lblPass
-            // 
-            this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblPass.Location = new System.Drawing.Point(96, 207);
-            this.lblPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(155, 27);
-            this.lblPass.TabIndex = 1;
-            this.lblPass.Text = "CONTRASEÑA:";
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.BackColor = System.Drawing.SystemColors.Control;
-            this.lblUser.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblUser.Location = new System.Drawing.Point(96, 145);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(112, 27);
-            this.lblUser.TabIndex = 0;
-            this.lblUser.Text = "USUARIO:";
+            this.pictureBox3.Image = global::Veterinario.Properties.Resources.veter;
+            this.pictureBox3.Location = new System.Drawing.Point(89, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(680, 140);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Veterinario.Properties.Resources.giphy__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(-4, -3);
+            this.pictureBox2.Image = global::Veterinario.Properties.Resources.giphy1;
+            this.pictureBox2.Location = new System.Drawing.Point(89, 74);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(522, 475);
+            this.pictureBox2.Size = new System.Drawing.Size(872, 478);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -156,17 +133,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(508, 461);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.izquierda);
-            this.Controls.Add(this.derecha);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(858, 516);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnLog);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.tbUser);
-            this.Controls.Add(this.lblPass);
-            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,6 +150,9 @@
             this.Name = "Form1";
             this.Text = "LOGIN";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,17 +160,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Button btnLog;
         private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.Button derecha;
-        private System.Windows.Forms.Button izquierda;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 

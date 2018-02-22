@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DialogoCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogoCita.Designer.cs">
+      <DependentUpon>DialogoCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DialogoCita.resx">
+      <DependentUpon>DialogoCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,10 +139,27 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
-    <None Include="Resources\giphy %282%29.gif" />
-    <None Include="Resources\giphy.gif" />
-    <None Include="Resources\giphy %283%29.gif" />
+    <None Include="Resources\bkgnddd1.jpg" />
+    <None Include="Resources\Imagen-animada-Huella-03.gif" />
+    <None Include="Resources\bkgnddd.jpg" />
+    <None Include="Resources\AVE.jpg" />
+    <None Include="Resources\orale.png" />
+    <None Include="Resources\oy.png" />
+    <None Include="Resources\wallhaven-453603.jpg" />
+    <None Include="Resources\wallhaven-338352.jpg" />
+    <None Include="Resources\veter.png" />
+    <None Include="Resources\reieno.jpg" />
+    <None Include="Resources\peeoo.jpg" />
+    <None Include="Resources\date.png" />
+    <None Include="Resources\black-1732414_19201.png" />
+    <None Include="Resources\X.png" />
     <None Include="Resources\source.gif" />
+    <None Include="Resources\source %281%29.gif" />
+    <None Include="Resources\black-1732414_1920.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\pass2.png" />
+    <None Include="Resources\veteri.png" />
+    <None Include="Resources\giphy1.gif" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
